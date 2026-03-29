@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inside Narrative Media — Sports Videography</title>
+  <meta name="description" content="Inside Narrative Media is a sports videography studio based in Phoenix, AZ. We craft cinematic stories that capture the intensity, emotion, and soul of athletic competition.">
+  <meta property="og:title" content="Inside Narrative Media — Sports Videography">
+  <meta property="og:description" content="Cinematic sports storytelling from Phoenix, AZ. NFL sidelines to HYROX arenas — we bring the narrative.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <svg class="preloader__logo" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+        <rect x="4" y="4" width="52" height="52" rx="4" stroke="currentColor" stroke-width="2"/>
+        <polygon points="24,18 24,42 42,30" fill="currentColor"/>
+      </svg>
+      <span class="preloader__text">INSIDE NARRATIVE</span>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="#hero" class="nav__logo" aria-label="Inside Narrative Media">
+        <svg viewBox="0 0 200 32" fill="none" class="nav__logo-svg" aria-hidden="true">
+          <rect x="0" y="2" width="28" height="28" rx="3" stroke="currentColor" stroke-width="1.8"/>
+          <polygon points="11,9 11,23 22,16" fill="currentColor"/>
+          <text x="36" y="22" fill="currentColor" font-family="'Clash Display', sans-serif" font-weight="600" font-size="14" letter-spacing="0.08em">INSIDE NARRATIVE</text>
+        </svg>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="#work" class="nav__link">Work</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Get In Touch</a></li>
+      </ul>
+      <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul class="mobile-menu__links" role="list">
+      <li><a href="#work" class="mobile-menu__link">Work</a></li>
+      <li><a href="#about" class="mobile-menu__link">About</a></li>
+      <li><a href="#services" class="mobile-menu__link">Services</a></li>
+      <li><a href="#contact" class="mobile-menu__link mobile-menu__link--cta">Get In Touch</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <video class="hero__video" autoplay muted loop playsinline poster="./assets/thumb-reel-1.jpg">
+          <source src="./assets/hyrox-reel.mp4" type="video/mp4">
+        </video>
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__tag">Sports Videography &mdash; Phoenix, AZ</p>
+        <h1 class="hero__title">Every Game<br>Has a Story</h1>
+        <p class="hero__sub">We capture the intensity, emotion, and soul of athletic competition through cinematic storytelling.</p>
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--primary">View Our Work</a>
+          <a href="#contact" class="btn btn--outline">Start a Project</a>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Clients Strip -->
+    <section class="clients">
+      <div class="container">
+        <p class="clients__label">Trusted By</p>
+        <div class="clients__row">
+          <span class="clients__name">HYROX</span>
+          <span class="clients__divider"></span>
+          <span class="clients__name">Arizona Cardinals</span>
+          <span class="clients__divider"></span>
+          <span class="clients__name">State Farm Stadium</span>
+          <span class="clients__divider"></span>
+          <span class="clients__name">CENTR</span>
+          <span class="clients__divider"></span>
+          <span class="clients__name">Built Better</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work / Portfolio -->
+    <section class="work" id="work">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-header__tag">Selected Work</p>
+          <h2 class="section-header__title">The Reel</h2>
+        </div>
+
+        <!-- Project 1: HYROX -->
+        <article class="project project--featured">
+          <div class="project__video-wrap">
+            <video class="project__video" muted loop playsinline poster="./assets/thumb-reel-1.jpg" data-autoplay>
+              <source src="./assets/hyrox-reel.mp4" type="video/mp4">
+            </video>
+            <button class="project__play" aria-label="Play video">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="1.5"/>
+                <polygon points="19,15 19,33 35,24" fill="currentColor"/>
+              </svg>
+            </button>
+          </div>
+          <div class="project__info">
+            <div class="project__meta">
+              <span class="project__category">Fitness Event</span>
+              <span class="project__year">2025</span>
+            </div>
+            <h3 class="project__title">HYROX Phoenix</h3>
+            <p class="project__desc">Full coverage of the HYROX World Series of Fitness Racing at State Farm Stadium. A cinematic look inside the world's largest indoor fitness competition — capturing the grit, community, and spectacle of race day from the arena floor to the stands.</p>
+            <ul class="project__tags" role="list">
+              <li>Event Coverage</li>
+              <li>Cinematic Reel</li>
+              <li>Behind-the-Scenes</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Project 2: Cardinals -->
+        <article class="project project--reverse">
+          <div class="project__video-wrap project__video-wrap--vertical">
+            <video class="project__video" muted loop playsinline poster="./assets/thumb-cardinals-2.jpg" data-autoplay>
+              <source src="./assets/cardinals-practice.mp4" type="video/mp4">
+            </video>
+            <button class="project__play" aria-label="Play video">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="1.5"/>
+                <polygon points="19,15 19,33 35,24" fill="currentColor"/>
+              </svg>
+            </button>
+          </div>
+          <div class="project__info">
+            <div class="project__meta">
+              <span class="project__category">NFL</span>
+              <span class="project__year">2025</span>
+            </div>
+            <h3 class="project__title">Arizona Cardinals — Practice Sessions</h3>
+            <p class="project__desc">On-field access during Arizona Cardinals practice sessions. Capturing the discipline, intensity, and day-to-day reality of professional football preparation — from individual drills to team formations, telling the stories that unfold between the lines.</p>
+            <ul class="project__tags" role="list">
+              <li>NFL Access</li>
+              <li>Practice Coverage</li>
+              <li>Athlete Stories</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Project 3: Built Better -->
+        <article class="project">
+          <div class="project__video-wrap project__video-wrap--vertical">
+            <video class="project__video" muted loop playsinline poster="./assets/thumb-snapp-3.jpg" data-autoplay>
+              <source src="./assets/snapp.mp4" type="video/mp4">
+            </video>
+            <button class="project__play" aria-label="Play video">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="1.5"/>
+                <polygon points="19,15 19,33 35,24" fill="currentColor"/>
+              </svg>
+            </button>
+          </div>
+          <div class="project__info">
+            <div class="project__meta">
+              <span class="project__category">Training Facility</span>
+              <span class="project__year">2025</span>
+            </div>
+            <h3 class="project__title">Built Better — Training Content</h3>
+            <p class="project__desc">Cinematic brand content for Built Better, a premier training and athletic recovery facility. Documenting coaching sessions, athlete rehabilitation, and the hands-on training environment — showcasing the expertise and intensity that sets the facility apart.</p>
+            <ul class="project__tags" role="list">
+              <li>Brand Content</li>
+              <li>Training Facility</li>
+              <li>Athlete Recovery</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Gallery Strip -->
+    <section class="gallery">
+      <div class="gallery__track">
+        <img src="./assets/thumb-reel-1.jpg" alt="HYROX Phoenix arena overview" loading="lazy" width="900" height="720">
+        <img src="./assets/thumb-cardinals-2.jpg" alt="Arizona Cardinals practice drill" loading="lazy" width="360" height="640">
+        <img src="./assets/thumb-reel-4.jpg" alt="HYROX spectators in the stands" loading="lazy" width="900" height="720">
+        <img src="./assets/thumb-reel-5.jpg" alt="HYROX competitors on the floor" loading="lazy" width="900" height="720">
+        <img src="./assets/thumb-reel-2.jpg" alt="HYROX event signage" loading="lazy" width="900" height="720">
+        <img src="./assets/thumb-cardinals-3.jpg" alt="Cardinals players running drills" loading="lazy" width="360" height="640">
+        <img src="./assets/thumb-reel-3.jpg" alt="Behind the scenes at HYROX" loading="lazy" width="900" height="720">
+        <img src="./assets/thumb-cardinals-4.jpg" alt="Cardinals defensive lineup" loading="lazy" width="360" height="640">
+        <img src="./assets/thumb-snapp-1.jpg" alt="Built Better gym training session" loading="lazy" width="720" height="1280">
+        <img src="./assets/thumb-snapp-3.jpg" alt="Athletic recovery and chiropractic work" loading="lazy" width="720" height="1280">
+        <img src="./assets/thumb-snapp-4.jpg" alt="Resistance band training at Built Better" loading="lazy" width="720" height="1280">
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__text">
+            <p class="section-header__tag">About</p>
+            <h2 class="section-header__title">The Narrative</h2>
+            <p class="about__body">Inside Narrative Media is a Phoenix-based sports videography studio built on one belief: every competition has a story worth telling. We don't just record moments — we craft narratives that capture the raw emotion, relentless preparation, and defining victories that make sports unforgettable.</p>
+            <p class="about__body">From NFL sidelines to the arena floor of the world's biggest fitness events, we bring cinematic storytelling to the athletic world. As visual storytellers in the athletic space, we wear more than one hat — directing, shooting, and editing to deliver content that resonates with audiences and amplifies brands.</p>
+            <div class="about__stats">
+              <div class="stat">
+                <span class="stat__number" data-count="50">0</span><span class="stat__suffix">+</span>
+                <span class="stat__label">Projects</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number" data-count="15">0</span><span class="stat__suffix">+</span>
+                <span class="stat__label">Clients</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number" data-count="3">0</span><span class="stat__suffix">M+</span>
+                <span class="stat__label">Views Generated</span>
+              </div>
+            </div>
+          </div>
+          <div class="about__visual">
+            <div class="about__image-stack">
+              <img src="./assets/thumb-reel-4.jpg" alt="Filmmaker at HYROX event" class="about__img about__img--main" loading="lazy" width="900" height="720">
+              <img src="./assets/thumb-cardinals-2.jpg" alt="On-field access at Cardinals practice" class="about__img about__img--accent" loading="lazy" width="360" height="640">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <p class="section-header__tag">What We Do</p>
+          <h2 class="section-header__title">Services</h2>
+        </div>
+        <div class="services__grid">
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="6" width="28" height="20" rx="3"/>
+                <polygon points="13,11 13,21 22,16"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Game Day Coverage</h3>
+            <p class="service-card__desc">Multi-camera cinematic coverage of live games, matches, and competitions. We capture the action from every angle to tell the complete story of the event.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="16" cy="16" r="14"/>
+                <path d="M16 8v8l5.5 3"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Behind-the-Scenes</h3>
+            <p class="service-card__desc">Practice sessions, locker room access, training camps, and preparation. We document the moments between the highlights that reveal who athletes truly are.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 28L14 4h4l10 24"/>
+                <path d="M8 20h16"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Athlete Profiles</h3>
+            <p class="service-card__desc">Short-form and long-form documentary content that puts the spotlight on individual athletes — their journey, their grit, and their story beyond the game.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="6" y="4" width="20" height="24" rx="2"/>
+                <path d="M11 10h10M11 15h10M11 20h6"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Social Content</h3>
+            <p class="service-card__desc">Reels, highlights, and platform-optimized clips designed for maximum engagement. We deliver content ready for Instagram, TikTok, YouTube Shorts, and X.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / Contact -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact__inner">
+          <p class="section-header__tag">Let's Work Together</p>
+          <h2 class="contact__title">Ready to Tell<br>Your Story?</h2>
+          <p class="contact__sub">Whether it's a single event or an ongoing partnership, we bring the same cinematic craft and storytelling precision to every project.</p>
+          <div class="contact__actions">
+            <a href="mailto:hello@insidenarrative.media" class="btn btn--primary btn--lg">hello@insidenarrative.media</a>
+          </div>
+          <div class="contact__social">
+            <a href="https://www.instagram.com/insidenarrative" target="_blank" rel="noopener noreferrer" class="contact__social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="5"/>
+                <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.youtube.com/@insidenarrative" target="_blank" rel="noopener noreferrer" class="contact__social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="4" width="20" height="16" rx="4"/>
+                <polygon points="10,8 10,16 16,12"/>
+              </svg>
+              <span>YouTube</span>
+            </a>
+            <a href="https://x.com/insidenarrative" target="_blank" rel="noopener noreferrer" class="contact__social-link" aria-label="X / Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              <span>X</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <svg viewBox="0 0 200 32" fill="none" class="footer__logo" aria-label="Inside Narrative Media">
+            <rect x="0" y="2" width="28" height="28" rx="3" stroke="currentColor" stroke-width="1.8"/>
+            <polygon points="11,9 11,23 22,16" fill="currentColor"/>
+            <text x="36" y="22" fill="currentColor" font-family="'Clash Display', sans-serif" font-weight="600" font-size="14" letter-spacing="0.08em">INSIDE NARRATIVE</text>
+          </svg>
+          <p class="footer__tagline">Sports Videography — Phoenix, AZ</p>
+        </div>
+        <p class="footer__copy">&copy; 2025 Inside Narrative Media. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
