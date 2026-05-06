@@ -659,86 +659,54 @@
 .about {
   padding: clamp(var(--space-16), 8vw, var(--space-32)) 0;
 }
-.about__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-12);
-  align-items: center;
-}
-.about__text {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-.about__body {
-  font-size: var(--text-base);
-  color: var(--color-text-muted);
-  line-height: 1.7;
-}
-.about__stats {
-  display: flex;
-  gap: var(--space-10);
-  margin-top: var(--space-6);
-  padding-top: var(--space-6);
-  border-top: 1px solid var(--color-divider);
-}
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-}
-.stat__number {
+.about__title {
   font-family: var(--font-display);
   font-size: var(--text-2xl);
   font-weight: 700;
   color: var(--color-text);
-  font-variant-numeric: tabular-nums;
-  line-height: 1;
+  text-align: center;
+  margin-bottom: var(--space-12);
 }
-.stat__suffix {
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  font-weight: 700;
-  color: var(--color-accent);
-  line-height: 1;
+.about__grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
 }
-.stat__label {
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
-  letter-spacing: 0.05em;
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.about__body {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.8;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
+  max-width: none;
 }
-
+.about__accent {
+  color: var(--color-accent);
+}
 .about__visual {
   position: relative;
 }
-.about__image-stack {
-  position: relative;
-}
-.about__img--main {
+.about__img--portrait {
   border-radius: var(--radius-lg);
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/4;
   object-fit: cover;
-}
-.about__img--accent {
-  position: absolute;
-  bottom: -var(--space-6);
-  right: -var(--space-4);
-  bottom: -24px;
-  right: -16px;
-  width: 45%;
-  aspect-ratio: 9/14;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  border: 3px solid var(--color-bg);
-  box-shadow: var(--shadow-lg);
+  object-position: top;
 }
 
+@media (max-width: 900px) {
+  .about__grid { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
+}
 @media (max-width: 768px) {
   .about__grid { grid-template-columns: 1fr; gap: var(--space-8); }
-  .about__stats { gap: var(--space-6); }
-  .about__img--accent { width: 40%; bottom: -16px; right: -8px; }
+  .about__title { margin-bottom: var(--space-8); }
 }
 
 /* ── Services ── */
