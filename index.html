@@ -33,10 +33,10 @@
   <header class="header" id="header">
     <nav class="nav">
       <a href="#hero" class="nav__logo" aria-label="Inside Narrative Media">
-        <svg viewBox="0 0 200 32" fill="none" class="nav__logo-svg" aria-hidden="true">
+        <svg viewBox="0 0 360 32" fill="none" class="nav__logo-svg" aria-hidden="true">
           <rect x="0" y="2" width="28" height="28" rx="3" stroke="currentColor" stroke-width="1.8"/>
           <polygon points="11,9 11,23 22,16" fill="currentColor"/>
-          <text x="36" y="22" fill="currentColor" font-family="'Clash Display', sans-serif" font-weight="600" font-size="14" letter-spacing="0.08em">INSIDE NARRATIVE</text>
+          <text x="36" y="22" fill="currentColor" font-family="' Fredoka One', sans-serif" font-weight="600" font-size="14" letter-spacing="0.08em">INSIDE NARRATIVE</text>
         </svg>
       </a>
       <ul class="nav__links" role="list">
@@ -72,14 +72,18 @@
       </div>
       <div class="hero__content">
         <div class="hero__logo-circle" role="img" aria-label="Inside Narrative Media">
-          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-            <defs>
-              <path id="circle-text-path" d="M 200,200 m -155,0 a 155,155 0 1,1 310,0 a 155,155 0 1,1 -310,0"/>
-            </defs>
-            <text font-family="'Caveat', cursive" font-size="46" font-weight="700" fill="white" letter-spacing="10">
-              <textPath href="#circle-text-path" startOffset="6%">NARRATIVE   INSIDE</textPath>
-            </text>
-          </svg>
+         <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <path id="top-arc" d="M 42,200 A 158,158 0 0,1 358,200"/>
+    <path id="bottom-arc" d="M 42,200 A 158,158 0 0,0 358,200"/>
+  </defs>
+  <text font-family="'Fredoka One', cursive" font-size="62" fill="white">
+    <textPath href="#top-arc" startOffset="50%" text-anchor="middle">INSIDE</textPath>
+  </text>
+  <text font-family="'Fredoka One', cursive" font-size="62" fill="white">
+    <textPath href="#bottom-arc" startOffset="50%" text-anchor="middle">NARRATIVE</textPath>
+  </text>
+</svg>
         </div>
       </div>
       <div class="hero__scroll">
