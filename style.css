@@ -317,6 +317,10 @@
   max-width: var(--content-wide);
   margin: 0 auto;
   padding: var(--space-32) var(--space-6) var(--space-16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
 }
 
 .hero__tag {
@@ -339,9 +343,9 @@
   margin-bottom: var(--space-6);
 }
 .hero__logo-circle {
-  width: 280px;
-  height: 280px;
-  margin-bottom: var(--space-6);
+  width: min(480px, 80vw);
+  height: min(480px, 80vw);
+  margin: auto;
   animation: logoSpin 8s linear infinite;
 }
 @keyframes logoSpin {

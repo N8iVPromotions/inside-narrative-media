@@ -11,7 +11,7 @@
 
   <!-- Fonts -->
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
 
   <base href="./"><link rel="stylesheet" href="./base.css">
   <link rel="stylesheet" href="./style.css">
@@ -71,29 +71,15 @@
         <div class="hero__overlay"></div>
       </div>
       <div class="hero__content">
-        <p class="hero__tag">Sports Videography &mdash; Phoenix, AZ</p>
         <div class="hero__logo-circle" role="img" aria-label="Inside Narrative Media">
           <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
             <defs>
-              <!-- Top arc: left→right clockwise through the top -->
-              <path id="top-arc" d="M 42,200 A 158,158 0 0,1 358,200"/>
-              <!-- Bottom arc: left→right counter-clockwise through the bottom -->
-              <path id="bottom-arc" d="M 42,200 A 158,158 0 0,0 358,200"/>
+              <path id="circle-text-path" d="M 200,200 m -155,0 a 155,155 0 1,1 310,0 a 155,155 0 1,1 -310,0"/>
             </defs>
-            <!-- INSIDE on top, centered, letters spaced to fill the arc -->
-            <text font-family="'Fredoka One', cursive" font-size="62" fill="white">
-              <textPath href="#top-arc" startOffset="3%" textLength="470" lengthAdjust="spacing">INSIDE</textPath>
-            </text>
-            <!-- NARRATIVE on bottom, centered, letters spaced to fill the arc -->
-            <text font-family="'Fredoka One', cursive" font-size="62" fill="white">
-              <textPath href="#bottom-arc" startOffset="3%" textLength="470" lengthAdjust="spacing">NARRATIVE</textPath>
+            <text font-family="'Caveat', cursive" font-size="46" font-weight="700" fill="white" letter-spacing="10">
+              <textPath href="#circle-text-path" startOffset="6%">NARRATIVE   INSIDE</textPath>
             </text>
           </svg>
-        </div>
-        <p class="hero__sub">We capture the intensity, emotion, and soul of athletic competition through cinematic storytelling.</p>
-        <div class="hero__actions">
-          <a href="#work" class="btn btn--primary">View Our Work</a>
-          <a href="#contact" class="btn btn--outline">Start a Project</a>
         </div>
       </div>
       <div class="hero__scroll">
