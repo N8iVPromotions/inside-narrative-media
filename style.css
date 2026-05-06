@@ -343,8 +343,8 @@
   margin-bottom: var(--space-6);
 }
 .hero__logo-circle {
-  width: min(1440px, 95vw, 90dvh);
-  height: min(1440px, 95vw, 90dvh);
+  width: min(1400px, 95vw, 90dvh);
+  height: min(1400px, 95vw, 90dvh);
   margin: auto;
   animation: logoSpin 10s linear infinite;
 }
