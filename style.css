@@ -343,9 +343,9 @@
   margin-bottom: var(--space-6);
 }
 .hero__logo-circle {
-  width: 280px;
-  height: 280px;
-  margin-bottom: var(--space-6);
+  width: min(1440px, 95vw);
+  height: min(1440px, 95vw);
+  margin: auto;
   animation: logoSpin 10s linear infinite;
 }
 @keyframes logoSpin {
