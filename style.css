@@ -338,6 +338,11 @@
   color: var(--color-text);
   margin-bottom: var(--space-6);
 }
+.hero__logo-circle {
+  width: 280px;
+  height: 280px;
+  margin-bottom: var(--space-6);
+}
 .hero__sub {
   font-size: var(--text-base);
   color: var(--color-text-muted);
