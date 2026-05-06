@@ -10,6 +10,7 @@ html {
   scroll-behavior: smooth;
   hanging-punctuation: first last;
   scroll-padding-top: var(--space-16);
+  overflow-x: hidden;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
   font-size: var(--text-base);
   color: var(--color-text);
   background-color: var(--color-bg);
+  overflow-x: hidden;
 }
 
 img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
