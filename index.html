@@ -73,25 +73,37 @@
       <div class="hero__content">
         <p class="hero__tag">Sports Videography &mdash; Phoenix, AZ</p>
         <div class="hero__logo-circle" role="img" aria-label="Inside Narrative Media">
-         <style>
-  @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
-</style>
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
 
-<svg width="680" height="680" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <path id="top-arc"    d="M 100,340 A 240,240 0 0,1 580,340"/>
-    <path id="bottom-arc" d="M 580,340 A 240,240 0 0,1 100,340"/>
-  </defs>
-  <circle cx="340" cy="340" r="240" fill="none" stroke="white" stroke-width="16"/>
-  <text font-family="'Lilita One', cursive" font-size="82" fill="white">
-    <textPath href="#top-arc" startOffset="50%" text-anchor="middle"
-      textLength="550" lengthAdjust="spacing">INSIDE</textPath>
-  </text>
-  <text font-family="'Lilita One', cursive" font-size="82" fill="white">
-    <textPath href="#bottom-arc" startOffset="50%" text-anchor="middle"
-      textLength="550" lengthAdjust="spacing">NARRATIVE</textPath>
-  </text>
-</svg>
+            <defs>
+
+              <!-- Top arc: left→right clockwise through the top -->
+
+              <path id="top-arc" d="M 42,200 A 158,158 0 0,1 358,200"/>
+
+              <!-- Bottom arc: left→right counter-clockwise through the bottom -->
+
+              <path id="bottom-arc" d="M 42,200 A 158,158 0 0,0 358,200"/>
+
+            </defs>
+
+            <!-- INSIDE on top, centered, letters spaced to fill the arc -->
+
+            <text font-family="'Fredoka One', cursive" font-size="62" fill="white">
+
+              <textPath href="#top-arc" startOffset="3%" textLength="470" lengthAdjust="spacing">INSIDE</textPath>
+
+            </text>
+
+            <!-- NARRATIVE on bottom, centered, letters spaced to fill the arc -->
+
+            <text font-family="'Fredoka One', cursive" font-size="62" fill="white">
+
+              <textPath href="#bottom-arc" startOffset="3%" textLength="470" lengthAdjust="spacing">NARRATIVE</textPath>
+
+            </text>
+
+          </svg>
         </div>
         <p class="hero__sub">We capture the intensity, emotion, and soul of athletic competition through cinematic storytelling.</p>
         <div class="hero__actions">
