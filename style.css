@@ -66,7 +66,7 @@
   --color-text-muted:  #999999;
   --color-text-faint:  #555555;
 
-  --color-accent:      #7a63ff;
+  --color-accent:      ##e0e0e0;
   --color-accent-hover:#6fb4ff;
   --color-accent-dark: #2d7ad6;
 
@@ -343,8 +343,8 @@
   margin-bottom: var(--space-6);
 }
 .hero__logo-circle {
-  width: min(1080px, 95vw, 90dvh);
-  height: min(1080px, 95vw, 90dvh);
+  width: min(1080px, 75vw, 80dvh);
+  height: min(1080px, 75vw, 80dvh);
   margin: auto;
   animation: logoSpin 15s linear infinite;
 }
