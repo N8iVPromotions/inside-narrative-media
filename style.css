@@ -346,7 +346,7 @@
   width: min(1080px, 75vw, 80dvh);
   height: min(1080px, 75vw, 80dvh);
   margin: auto;
-  animation: logoSpin 15s linear infinite;
+  animation: logoSpin 25s linear infinite;
 }
 @keyframes logoSpin {
   from { transform: rotate(0deg); }
