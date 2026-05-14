@@ -293,12 +293,40 @@
     <section class="contact" id="contact">
       <div class="container">
         <div class="contact__inner">
-          <p class="section-header__tag">Let's Work Together</p>
-          <h2 class="contact__title">Ready to Tell<br>Your Story?</h2>
-          <p class="contact__sub">Whether it's a single event or an ongoing partnership, we bring the same cinematic craft and storytelling precision to every project.</p>
-          <div class="contact__actions">
-            <a href="mailto:insidenarrativemedia@gmail.com" class="btn btn--primary btn--lg">insidenarrativemedia@gmail.com</a>
+          <div class="contact__header">
+            <p class="section-header__tag">Let's Work Together</p>
+            <h2 class="contact__title">Ready to Tell<br>Your Story?</h2>
+            <p class="contact__sub">Whether it's a single event or an ongoing partnership, we bring the same cinematic craft and storytelling precision to every project.</p>
           </div>
+          <form class="contact__form" name="contact" action="mailto:insidenarrativemedia@gmail.com" method="POST" enctype="text/plain" novalidate>
+            <div class="contact__row">
+              <div class="contact__field">
+                <label class="contact__label" for="contact-name">Name</label>
+                <input class="contact__input" type="text" id="contact-name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="contact__field">
+                <label class="contact__label" for="contact-email">Email</label>
+                <input class="contact__input" type="email" id="contact-email" name="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div class="contact__field">
+              <label class="contact__label" for="contact-project">Project Type</label>
+              <select class="contact__input contact__select" id="contact-project" name="project">
+                <option value="" disabled selected>Select a service…</option>
+                <option value="event">Event Coverage</option>
+                <option value="athlete">Athlete Profile</option>
+                <option value="brand">Brand / Commercial</option>
+                <option value="documentary">Documentary</option>
+                <option value="social">Social Content</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="contact__field">
+              <label class="contact__label" for="contact-message">Message</label>
+              <textarea class="contact__input contact__textarea" id="contact-message" name="message" placeholder="Tell us about your project…" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg contact__submit">Send Message</button>
+          </form>
           <div class="contact__social">
             <a href="https://www.instagram.com/insidenarrativemedia_/" target="_blank" rel="noopener noreferrer" class="contact__social-link" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
