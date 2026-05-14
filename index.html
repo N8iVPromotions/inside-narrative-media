@@ -21,10 +21,16 @@
   <!-- Preloader -->
   <div class="preloader" id="preloader">
     <div class="preloader__inner">
-      <svg class="preloader__logo" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-        <rect x="4" y="4" width="52" height="52" rx="4" stroke="currentColor" stroke-width="2"/>
-        <polygon points="24,18 24,42 42,30" fill="currentColor"/>
-      </svg>
+      <div class="preloader__circle" aria-hidden="true">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+          <defs>
+            <path id="preloader-text-path" d="M 200,200 m -155,0 a 155,155 0 1,1 310,0 a 155,155 0 1,1 -310,0"/>
+          </defs>
+          <text font-family="'Caveat', cursive" font-size="50" font-weight="900" font-style="italic" fill="white">
+            <textPath href="#preloader-text-path" startOffset="0%" textLength="974" lengthAdjust="spacing">NARRATIVE·INSIDE·</textPath>
+          </text>
+        </svg>
+      </div>
       <span class="preloader__text">INSIDE NARRATIVE</span>
     </div>
   </div>
