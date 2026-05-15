@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Inside Narrative Media — Wordmark Only -->
+<svg viewBox="0 0 420 60" xmlns="http://www.w3.org/2000/svg" width="420" height="60" role="img" aria-label="Inside Narrative Media wordmark">
+  <defs>
+    <style>
+      @import url('https://api.fontshare.com/v2/css?f[]=clash-display@700&amp;display=swap');
+    </style>
+  </defs>
+  <text x="0" y="28" fill="#e8e8e8" font-family="'Clash Display', 'Arial Black', sans-serif" font-weight="700" font-size="26" letter-spacing="4">INSIDE</text>
+  <text x="0" y="56" fill="#e8e8e8" font-family="'Clash Display', 'Arial Black', sans-serif" font-weight="700" font-size="26" letter-spacing="4">NARRATIVE MEDIA</text>
+</svg>

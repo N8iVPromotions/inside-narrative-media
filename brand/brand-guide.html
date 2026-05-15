@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inside Narrative Media — Brand Guide</title>
+
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: #0a0a0a;
+      color: #e8e8e8;
+      font-family: 'General Sans', 'Helvetica Neue', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ── */
+    .page { max-width: 1100px; margin: 0 auto; padding: 80px 40px; }
+    .section { margin-bottom: 100px; }
+    .section-label {
+      font-family: 'General Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #555555;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Clash Display', 'Arial Black', sans-serif;
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      color: #e8e8e8;
+      margin-bottom: 48px;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid #1e1e1e;
+      margin: 100px 0;
+    }
+
+    /* ── Cover ── */
+    .cover {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: 1px solid #1e1e1e;
+      margin-bottom: 100px;
+      position: relative;
+    }
+    .cover__logo-wrap {
+      width: min(320px, 70vw);
+      margin-bottom: 60px;
+    }
+    .cover__logo-wrap svg {
+      width: 100%;
+      height: auto;
+      animation: spin 25s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .cover__title {
+      font-family: 'Clash Display', sans-serif;
+      font-size: clamp(36px, 7vw, 88px);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 0.95;
+      color: #e8e8e8;
+    }
+    .cover__title span { color: #555555; }
+    .cover__sub {
+      font-size: 14px;
+      color: #555555;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 24px;
+    }
+    .cover__badge {
+      display: inline-block;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 9999px;
+      padding: 6px 16px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #999999;
+      margin-bottom: 40px;
+    }
+
+    /* ── Logo Section ── */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .logo-swatch {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #2a2a2a;
+    }
+    .logo-swatch__preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 32px;
+      min-height: 200px;
+    }
+    .logo-swatch__preview--dark  { background: #0a0a0a; }
+    .logo-swatch__preview--mid   { background: #1a1a1a; }
+    .logo-swatch__preview--light { background: #f5f5f5; }
+    .logo-swatch__preview--white { background: #ffffff; }
+    .logo-swatch__preview img,
+    .logo-swatch__preview svg {
+      max-width: 100%;
+      max-height: 160px;
+      width: auto;
+      height: auto;
+    }
+    .logo-swatch__label {
+      background: #111111;
+      padding: 16px 20px;
+      border-top: 1px solid #2a2a2a;
+    }
+    .logo-swatch__name {
+      font-family: 'Clash Display', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #e8e8e8;
+      margin-bottom: 4px;
+    }
+    .logo-swatch__use {
+      font-size: 12px;
+      color: #555555;
+    }
+
+    /* Logo inline renders */
+    .logo-circle-svg {
+      width: 160px;
+      height: 160px;
+    }
+    .logo-h-svg {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    /* ── Color Section ── */
+    .color-palette {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .color-group-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #555555;
+      margin-bottom: 16px;
+    }
+    .color-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .color-chip {
+      flex: 1;
+      min-width: 120px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #2a2a2a;
+    }
+    .color-chip__swatch {
+      height: 100px;
+    }
+    .color-chip__info {
+      background: #111111;
+      padding: 12px 14px;
+      border-top: 1px solid #2a2a2a;
+    }
+    .color-chip__name {
+      font-family: 'Clash Display', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #e8e8e8;
+      margin-bottom: 3px;
+    }
+    .color-chip__hex {
+      font-size: 11px;
+      color: #555555;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.04em;
+    }
+    .color-chip__token {
+      font-size: 10px;
+      color: #3a3a3a;
+      margin-top: 2px;
+      font-family: 'Courier New', monospace;
+    }
+
+    /* ── Typography Section ── */
+    .type-specimens {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .type-specimen {
+      border: 1px solid #1e1e1e;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .type-specimen__preview {
+      padding: 48px 40px;
+      background: #0d0d0d;
+    }
+    .type-specimen__meta {
+      padding: 20px 40px;
+      background: #111111;
+      border-top: 1px solid #1e1e1e;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .type-specimen__stat { display: flex; flex-direction: column; gap: 2px; }
+    .type-specimen__stat-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #555555;
+    }
+    .type-specimen__stat-value {
+      font-size: 13px;
+      color: #999999;
+    }
+
+    /* Type samples */
+    .sample-display {
+      font-family: 'Clash Display', 'Arial Black', sans-serif;
+      font-weight: 700;
+      font-size: clamp(42px, 8vw, 96px);
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      line-height: 0.9;
+      color: #e8e8e8;
+    }
+    .sample-body {
+      font-family: 'General Sans', 'Helvetica Neue', sans-serif;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #999999;
+      max-width: 560px;
+    }
+    .sample-label {
+      font-family: 'General Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #6fb4ff;
+    }
+    .sample-script {
+      font-family: 'Caveat', cursive;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 72px;
+      color: #e8e8e8;
+      line-height: 1;
+    }
+
+    .type-scale {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .type-scale-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      align-items: baseline;
+      gap: 24px;
+      padding: 16px 0;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .type-scale-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .type-scale-size { font-size: 11px; color: #555555; }
+    .type-scale-token { font-size: 10px; color: #3a3a3a; font-family: monospace; }
+
+    /* ── Spacing Section ── */
+    .spacing-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .spacing-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .spacing-bar-wrap {
+      flex: 1;
+      background: #111111;
+      border-radius: 4px;
+      overflow: hidden;
+      height: 32px;
+      display: flex;
+      align-items: center;
+    }
+    .spacing-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #2a2a2a, #3a3a3a);
+      border-radius: 4px;
+    }
+    .spacing-label { width: 80px; font-size: 12px; color: #555555; text-align: right; font-family: monospace; }
+    .spacing-value { width: 60px; font-size: 12px; color: #999999; font-family: monospace; }
+
+    /* ── Usage Rules ── */
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .rule-card {
+      border-radius: 12px;
+      padding: 32px;
+      border: 1px solid #2a2a2a;
+    }
+    .rule-card--do   { border-color: #1e3a1e; background: #0d1a0d; }
+    .rule-card--dont { border-color: #3a1e1e; background: #1a0d0d; }
+    .rule-card__badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      margin-bottom: 20px;
+    }
+    .rule-card--do   .rule-card__badge { background: #1e4d1e; color: #4ddb4d; }
+    .rule-card--dont .rule-card__badge { background: #4d1e1e; color: #db4d4d; }
+    .rule-card__title {
+      font-family: 'Clash Display', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #e8e8e8;
+      margin-bottom: 12px;
+    }
+    .rule-card__text {
+      font-size: 14px;
+      color: #999999;
+      line-height: 1.65;
+    }
+
+    /* ── Motion ── */
+    .motion-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .motion-card {
+      background: #111111;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
+      padding: 28px 24px;
+    }
+    .motion-card__name {
+      font-family: 'Clash Display', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #e8e8e8;
+      margin-bottom: 8px;
+    }
+    .motion-card__value {
+      font-size: 13px;
+      color: #6fb4ff;
+      font-family: monospace;
+      margin-bottom: 8px;
+    }
+    .motion-card__use {
+      font-size: 12px;
+      color: #555555;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      position: sticky;
+      top: 40px;
+      align-self: start;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body { background: #fff; color: #000; }
+      .cover { min-height: auto; page-break-after: always; }
+      .section { page-break-inside: avoid; }
+    }
+
+    @media (max-width: 640px) {
+      .page { padding: 48px 20px; }
+      .type-specimen__meta { flex-direction: column; gap: 16px; }
+      .type-scale-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══ COVER ══════════════════════════════════════════════ -->
+  <section class="cover">
+    <div class="cover__logo-wrap">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-label="Inside Narrative Media">
+        <defs>
+          <path id="cover-path" d="M 200,200 m -155,0 a 155,155 0 1,1 310,0 a 155,155 0 1,1 -310,0"/>
+        </defs>
+        <text font-family="'Caveat', cursive" font-size="50" font-weight="900" font-style="italic" fill="#e8e8e8">
+          <textPath href="#cover-path" startOffset="0%" textLength="974" lengthAdjust="spacing">NARRATIVE·INSIDE·</textPath>
+        </text>
+      </svg>
+    </div>
+    <div class="cover__badge">Visual Identity System · 2026</div>
+    <h1 class="cover__title">Inside<br><span>Narrative</span><br>Media</h1>
+    <p class="cover__sub">Brand Guide — Sports Videography · Phoenix, AZ</p>
+  </section>
+
+
+  <!-- ══ LOGO ═══════════════════════════════════════════════ -->
+  <section class="section" id="logo">
+    <p class="section-label">01 — Identity</p>
+    <h2 class="section-title">Logo System</h2>
+
+    <div class="logo-grid">
+
+      <!-- Primary: Circular -->
+      <div class="logo-swatch">
+        <div class="logo-swatch__preview logo-swatch__preview--dark">
+          <svg class="logo-circle-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-label="Inside Narrative Media circular logo">
+            <defs>
+              <path id="p1" d="M 200,200 m -155,0 a 155,155 0 1,1 310,0 a 155,155 0 1,1 -310,0"/>
+            </defs>
+            <circle cx="200" cy="200" r="199" fill="#0a0a0a"/>
+            <text font-family="'Caveat', cursive" font-size="50" font-weight="900" font-style="italic" fill="#e8e8e8">
+              <textPath href="#p1" startOffset="0%" textLength="974" lengthAdjust="spacing">NARRATIVE·INSIDE·</textPath>
+            </text>
+          </svg>
+        </div>
+        <div class="logo-swatch__label">
+          <p class="logo-swatch__name">Primary — Circle Mark</p>
+          <p class="logo-swatch__use">Use on dark backgrounds. Primary brand mark.</p>
+        </div>
+      </div>
+
+      <!-- Reverse: Circular on white -->
+      <div class="logo-swatch">
+        <div class="logo-swatch__preview logo-swatch__preview--light">
+          <svg class="logo-circle-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-label="Inside Narrative Media circular logo reversed">
+            <defs>
+              <path id="p2" d="M 200,200 m -155,0 a 155,155 0 1,1 310,0 a 155,155 0 1,1 -310,0"/>
+            </defs>
+            <circle cx="200" cy="200" r="199" fill="#f5f5f5"/>
+            <text font-family="'Caveat', cursive" font-size="50" font-weight="900" font-style="italic" fill="#0a0a0a">
+              <textPath href="#p2" startOffset="0%" textLength="974" lengthAdjust="spacing">NARRATIVE·INSIDE·</textPath>
+            </text>
+          </svg>
+        </div>
+        <div class="logo-swatch__label">
+          <p class="logo-swatch__name">Reverse — Circle Mark</p>
+          <p class="logo-swatch__use">Use on light / white backgrounds only.</p>
+        </div>
+      </div>
+
+      <!-- Horizontal lockup: dark -->
+      <div class="logo-swatch">
+        <div class="logo-swatch__preview logo-swatch__preview--dark">
+          <svg class="logo-h-svg" viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg" aria-label="Inside Narrative Media horizontal logo">
+            <rect x="0" y="8" width="64" height="64" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1.5"/>
+            <polygon points="24,24 24,56 50,40" fill="#e8e8e8"/>
+            <text x="84" y="30" fill="#e8e8e8" font-family="'Clash Display', 'Arial Black', sans-serif" font-weight="700" font-size="22" letter-spacing="3">INSIDE</text>
+            <text x="84" y="58" fill="#e8e8e8" font-family="'Clash Display', 'Arial Black', sans-serif" font-weight="700" font-size="22" letter-spacing="3">NARRATIVE</text>
+            <text x="84" y="75" fill="#555555" font-family="'Arial', sans-serif" font-size="9" letter-spacing="2.5">MEDIA · PHOENIX, AZ</text>
+          </svg>
+        </div>
+        <div class="logo-swatch__label">
+          <p class="logo-swatch__name">Horizontal Lockup — Dark</p>
+          <p class="logo-swatch__use">Nav, headers, email signatures, footers.</p>
+        </div>
+      </div>
+
+      <!-- Icon mark only -->
+      <div class="logo-swatch">
+        <div class="logo-swatch__preview logo-swatch__preview--mid">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" width="80" height="80" aria-label="Inside Narrative Media icon">
+            <rect x="0" y="0" width="80" height="80" rx="10" fill="#0a0a0a" stroke="#2a2a2a" stroke-width="1.5"/>
+            <polygon points="26,20 26,60 60,40" fill="#e8e8e8"/>
+          </svg>
+        </div>
+        <div class="logo-swatch__label">
+          <p class="logo-swatch__name">Icon Mark</p>
+          <p class="logo-swatch__use">Favicons, app icons, social profile images, small contexts.</p>
+        </div>
+      </div>
+
+      <!-- Wordmark only -->
+      <div class="logo-swatch">
+        <div class="logo-swatch__preview logo-swatch__preview--dark" style="flex-direction:column; gap:4px; align-items:flex-start; padding-left:40px;">
+          <span style="font-family:'Clash Display',sans-serif;font-weight:700;font-size:28px;text-transform:uppercase;letter-spacing:4px;color:#e8e8e8;">INSIDE</span>
+          <span style="font-family:'Clash Display',sans-serif;font-weight:700;font-size:28px;text-transform:uppercase;letter-spacing:4px;color:#e8e8e8;">NARRATIVE</span>
+          <span style="font-family:'Clash Display',sans-serif;font-weight:700;font-size:28px;text-transform:uppercase;letter-spacing:4px;color:#e8e8e8;">MEDIA</span>
+        </div>
+        <div class="logo-swatch__label">
+          <p class="logo-swatch__name">Wordmark</p>
+          <p class="logo-swatch__use">Large print, banners, title cards, motion graphics.</p>
+        </div>
+      </div>
+
+      <!-- Nav logo (as used on site) -->
+      <div class="logo-swatch">
+        <div class="logo-swatch__preview logo-swatch__preview--mid">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="40" height="40" aria-hidden="true">
+              <defs>
+                <path id="p-nav" d="M 200,200 m -155,0 a 155,155 0 1,1 310,0 a 155,155 0 1,1 -310,0"/>
+              </defs>
+              <text font-family="'Caveat', cursive" font-size="50" font-weight="900" font-style="italic" fill="#e8e8e8">
+                <textPath href="#p-nav" startOffset="0%" textLength="974" lengthAdjust="spacing">NARRATIVE·INSIDE·</textPath>
+              </text>
+            </svg>
+            <span style="font-family:'Clash Display',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:#e8e8e8;">INSIDE NARRATIVE</span>
+          </div>
+        </div>
+        <div class="logo-swatch__label">
+          <p class="logo-swatch__name">Nav Lockup</p>
+          <p class="logo-swatch__use">Navigation bar usage — circle mark + wordmark inline.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══ COLORS ═════════════════════════════════════════════ -->
+  <section class="section" id="colors">
+    <p class="section-label">02 — Color</p>
+    <h2 class="section-title">Color System</h2>
+
+    <div class="color-palette">
+
+      <!-- Core Neutrals -->
+      <div>
+        <p class="color-group-label">Core Neutrals</p>
+        <div class="color-row">
+          <div class="color-chip">
+            <div class="color-chip__swatch" style="background:#0a0a0a;border-bottom:1px solid #1a1a1a;"></div>
+            <div class="color-chip__info">
+              <p class="color-chip__name">Carbon</p>
+              <p class="color-chip__hex">#0a0a0a</p>
+              <p class="color-chip__token">--inm-carbon</p>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch" style="background:#111111;"></div>
+            <div class="color-chip__info">
+              <p class="color-chip__name">Obsidian</p>
+              <p class="color-chip__hex">#111111</p>
+              <p class="color-chip__token">--inm-obsidian</p>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch" style="background:#1a1a1a;"></div>
+            <div class="color-chip__info">
+              <p class="color-chip__name">Graphite</p>
+              <p class="color-chip__hex">#1a1a1a</p>
+              <p class="color-chip__token">--inm-graphite</p>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch" style="background:#2a2a2a;"></div>
+            <div class="color-chip__info">
+              <p class="color-chip__name">Steel</p>
+              <p class="color-chip__hex">#2a2a2a</p>
+              <p class="color-chip__token">--inm-steel</p>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch" style="background:#555555;"></div>
+            <div class="color-chip__info">
+              <p class="color-chip__name">Iron</p>
+              <p class="color-chip__hex">#555555</p>
+              <p class="color-chip__token">--inm-iron</p>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch" style="background:#999999;"></div>
+            <div class="color-chip__info">
+              <p class="color-chip__name">Silver</p>
+              <p class="color-chip__hex">#999999</p>
+              <p class="color-chip__token">--inm-silver</p>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch" style="background:#e8e8e8;"></div>
+            <div class="color-chip__info">
+              <p class="color-chip__name">Smoke</p>
+              <p class="color-chip__hex">#e8e8e8</p>
+              <p class="color-chip__token">--inm-smoke</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accent -->
+      <div>
+        <p class="color-group-label">Accent</p>
+        <div class="color-row">
+          <div class="color-chip">
+            <div class="color-chip__swatch" style="background:#e0e0e0;"></div>
+            <div class="color-chip__info">
+              <p class="color-chip__name">Titanium</p>
+              <p class="color-chip__hex">#e0e0e0</p>
+              <p class="color-chip__token">--inm-titanium</p>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch" style="background:#6fb4ff;"></div>
+            <div class="color-chip__info">
+              <p class="color-chip__name">Electric</p>
+              <p class="color-chip__hex">#6fb4ff</p>
+              <p class="color-chip__token">--inm-electric</p>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch" style="background:#2d7ad6;"></div>
+            <div class="color-chip__info">
+              <p class="color-chip__name">Ocean</p>
+              <p class="color-chip__hex">#2d7ad6</p>
+              <p class="color-chip__token">--inm-ocean</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Light Theme -->
+      <div>
+        <p class="color-group-label">Light Theme</p>
+        <div class="color-row">
+          <div class="color-chip">
+            <div class="color-chip__swatch" style="background:#f5f5f5;border-bottom:1px solid #e0e0e0;"></div>
+            <div class="color-chip__info">
+              <p class="color-chip__name">Light BG</p>
+              <p class="color-chip__hex">#f5f5f5</p>
+              <p class="color-chip__token">--inm-light-bg</p>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch" style="background:#ffffff;border-bottom:1px solid #e0e0e0;"></div>
+            <div class="color-chip__info">
+              <p class="color-chip__name">White</p>
+              <p class="color-chip__hex">#ffffff</p>
+              <p class="color-chip__token">--inm-white</p>
+            </div>
+          </div>
+          <div class="color-chip">
+            <div class="color-chip__swatch" style="background:#1a6fd6;"></div>
+            <div class="color-chip__info">
+              <p class="color-chip__name">Light Accent</p>
+              <p class="color-chip__hex">#1a6fd6</p>
+              <p class="color-chip__token">--inm-light-accent</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══ TYPOGRAPHY ═════════════════════════════════════════ -->
+  <section class="section" id="typography">
+    <p class="section-label">03 — Typography</p>
+    <h2 class="section-title">Type System</h2>
+
+    <div class="type-specimens">
+
+      <!-- Display -->
+      <div class="type-specimen">
+        <div class="type-specimen__preview">
+          <p class="sample-display">Inside<br>Narrative</p>
+        </div>
+        <div class="type-specimen__meta">
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Typeface</span>
+            <span class="type-specimen__stat-value">Clash Display</span>
+          </div>
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Weights</span>
+            <span class="type-specimen__stat-value">400 · 500 · 600 · 700</span>
+          </div>
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Variable</span>
+            <span class="type-specimen__stat-value">--font-display</span>
+          </div>
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Use</span>
+            <span class="type-specimen__stat-value">Headlines, nav, labels, UI</span>
+          </div>
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Source</span>
+            <span class="type-specimen__stat-value">api.fontshare.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div class="type-specimen">
+        <div class="type-specimen__preview">
+          <p class="sample-label" style="margin-bottom:16px;">Sports Videography — Phoenix, AZ</p>
+          <p class="sample-body">Inside Narrative Media crafts cinematic stories that capture the intensity, emotion, and soul of athletic competition. From NFL sidelines to HYROX arenas — we bring the narrative.</p>
+        </div>
+        <div class="type-specimen__meta">
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Typeface</span>
+            <span class="type-specimen__stat-value">General Sans</span>
+          </div>
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Weights</span>
+            <span class="type-specimen__stat-value">400 · 500 · 600</span>
+          </div>
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Variable</span>
+            <span class="type-specimen__stat-value">--font-body</span>
+          </div>
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Use</span>
+            <span class="type-specimen__stat-value">Body copy, captions, UI labels</span>
+          </div>
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Line Height</span>
+            <span class="type-specimen__stat-value">1.6 – 1.8</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Script / Logo font -->
+      <div class="type-specimen">
+        <div class="type-specimen__preview">
+          <p class="sample-script">NARRATIVE·INSIDE·</p>
+        </div>
+        <div class="type-specimen__meta">
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Typeface</span>
+            <span class="type-specimen__stat-value">Caveat</span>
+          </div>
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Style</span>
+            <span class="type-specimen__stat-value">Italic · 700</span>
+          </div>
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Use</span>
+            <span class="type-specimen__stat-value">Logo circular mark only</span>
+          </div>
+          <div class="type-specimen__stat">
+            <span class="type-specimen__stat-label">Source</span>
+            <span class="type-specimen__stat-value">Google Fonts</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Type scale -->
+    <div class="type-scale" style="margin-top:60px;">
+      <p class="section-label" style="margin-bottom:0;">Type Scale</p>
+      <div class="type-scale-row">
+        <div class="type-scale-meta">
+          <span class="type-scale-size">Hero</span>
+          <span class="type-scale-token">--text-hero</span>
+        </div>
+        <span style="font-family:'Clash Display',sans-serif;font-weight:700;font-size:clamp(30px,5vw,64px);text-transform:uppercase;letter-spacing:-0.02em;color:#e8e8e8;">Headline</span>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-meta">
+          <span class="type-scale-size">3XL · 2.5–5rem</span>
+          <span class="type-scale-token">--text-3xl</span>
+        </div>
+        <span style="font-family:'Clash Display',sans-serif;font-weight:700;font-size:clamp(24px,4vw,48px);text-transform:uppercase;color:#e8e8e8;">Section Title</span>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-meta">
+          <span class="type-scale-size">2XL · 2–3.5rem</span>
+          <span class="type-scale-token">--text-2xl</span>
+        </div>
+        <span style="font-family:'Clash Display',sans-serif;font-weight:700;font-size:clamp(20px,3.5vw,36px);text-transform:uppercase;color:#e8e8e8;">Project Title</span>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-meta">
+          <span class="type-scale-size">XL · 1.5–2.25rem</span>
+          <span class="type-scale-token">--text-xl</span>
+        </div>
+        <span style="font-family:'Clash Display',sans-serif;font-weight:700;font-size:clamp(18px,2.5vw,28px);text-transform:uppercase;color:#e8e8e8;">Card Heading</span>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-meta">
+          <span class="type-scale-size">LG · 1.125–1.5rem</span>
+          <span class="type-scale-token">--text-lg</span>
+        </div>
+        <span style="font-family:'Clash Display',sans-serif;font-weight:600;font-size:clamp(16px,2vw,22px);text-transform:uppercase;color:#e8e8e8;">Service Title</span>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-meta">
+          <span class="type-scale-size">Base · 1–1.125rem</span>
+          <span class="type-scale-token">--text-base</span>
+        </div>
+        <span style="font-family:'General Sans',sans-serif;font-size:17px;color:#999999;">Body copy — project descriptions, about text, form labels.</span>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-meta">
+          <span class="type-scale-size">SM · 0.875–1rem</span>
+          <span class="type-scale-token">--text-sm</span>
+        </div>
+        <span style="font-family:'General Sans',sans-serif;font-size:14px;color:#999999;">Secondary body — testimonials, captions, helper text.</span>
+      </div>
+      <div class="type-scale-row">
+        <div class="type-scale-meta">
+          <span class="type-scale-size">XS · 0.75–0.875rem</span>
+          <span class="type-scale-token">--text-xs</span>
+        </div>
+        <span style="font-family:'General Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#555555;">UI LABELS · TAGS · METADATA</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══ SPACING ════════════════════════════════════════════ -->
+  <section class="section" id="spacing">
+    <p class="section-label">04 — Spacing</p>
+    <h2 class="section-title">Spacing Scale</h2>
+
+    <div class="spacing-grid">
+      <div class="spacing-row">
+        <span class="spacing-label">--space-1</span>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:4px;"></div></div>
+        <span class="spacing-value">4px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">--space-2</span>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:8px;"></div></div>
+        <span class="spacing-value">8px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">--space-3</span>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:12px;"></div></div>
+        <span class="spacing-value">12px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">--space-4</span>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:16px;"></div></div>
+        <span class="spacing-value">16px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">--space-5</span>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:20px;"></div></div>
+        <span class="spacing-value">20px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">--space-6</span>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:24px;"></div></div>
+        <span class="spacing-value">24px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">--space-8</span>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:32px;"></div></div>
+        <span class="spacing-value">32px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">--space-10</span>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:40px;"></div></div>
+        <span class="spacing-value">40px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">--space-12</span>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:48px;"></div></div>
+        <span class="spacing-value">48px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">--space-16</span>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:64px;"></div></div>
+        <span class="spacing-value">64px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">--space-20</span>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:80px;"></div></div>
+        <span class="spacing-value">80px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">--space-24</span>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:96px;"></div></div>
+        <span class="spacing-value">96px</span>
+      </div>
+      <div class="spacing-row">
+        <span class="spacing-label">--space-32</span>
+        <div class="spacing-bar-wrap"><div class="spacing-bar" style="width:128px;"></div></div>
+        <span class="spacing-value">128px</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══ MOTION ════════════════════════════════════════════ -->
+  <section class="section" id="motion">
+    <p class="section-label">05 — Motion</p>
+    <h2 class="section-title">Motion &amp; Easing</h2>
+
+    <div class="motion-grid">
+      <div class="motion-card">
+        <p class="motion-card__name">Interactive</p>
+        <p class="motion-card__value">180ms ease-out</p>
+        <p class="motion-card__use">Hover states, button presses, link transitions.</p>
+      </div>
+      <div class="motion-card">
+        <p class="motion-card__name">Ease Out</p>
+        <p class="motion-card__value">cubic-bezier(0.16,1,0.3,1)</p>
+        <p class="motion-card__use">Elements entering the viewport, menus opening.</p>
+      </div>
+      <div class="motion-card">
+        <p class="motion-card__name">Ease In</p>
+        <p class="motion-card__value">cubic-bezier(0.4,0,1,1)</p>
+        <p class="motion-card__use">Elements leaving / fading out.</p>
+      </div>
+      <div class="motion-card">
+        <p class="motion-card__name">Ease In-Out</p>
+        <p class="motion-card__value">cubic-bezier(0.4,0,0.2,1)</p>
+        <p class="motion-card__use">Looping animations, gallery marquee.</p>
+      </div>
+      <div class="motion-card">
+        <p class="motion-card__name">Logo Spin</p>
+        <p class="motion-card__value">25s linear infinite</p>
+        <p class="motion-card__use">Hero circular logo rotation. Slow, cinematic.</p>
+      </div>
+      <div class="motion-card">
+        <p class="motion-card__name">Gallery Marquee</p>
+        <p class="motion-card__value">40s linear infinite</p>
+        <p class="motion-card__use">Photo strip auto-scroll. Continuous loop.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══ USAGE RULES ════════════════════════════════════════ -->
+  <section class="section" id="usage">
+    <p class="section-label">06 — Usage</p>
+    <h2 class="section-title">Logo Do's &amp; Don'ts</h2>
+
+    <div class="rules-grid">
+      <div class="rule-card rule-card--do">
+        <span class="rule-card__badge">Do</span>
+        <p class="rule-card__title">Use on Brand Backgrounds</p>
+        <p class="rule-card__text">Always place the primary circular mark on Carbon (#0a0a0a) or Obsidian (#111111). These are the canonical brand backgrounds.</p>
+      </div>
+      <div class="rule-card rule-card--dont">
+        <span class="rule-card__badge">Don't</span>
+        <p class="rule-card__title">Don't Place on Busy Photos</p>
+        <p class="rule-card__text">Never drop the logo directly over video frames or busy photography without a dark scrim underneath. Legibility must always be maintained.</p>
+      </div>
+      <div class="rule-card rule-card--do">
+        <span class="rule-card__badge">Do</span>
+        <p class="rule-card__title">Maintain Clear Space</p>
+        <p class="rule-card__text">Keep a minimum clear space equal to the height of the "I" in INSIDE around all logo variants at all times.</p>
+      </div>
+      <div class="rule-card rule-card--dont">
+        <span class="rule-card__badge">Don't</span>
+        <p class="rule-card__title">Don't Recolor the Logo</p>
+        <p class="rule-card__text">Never apply brand accent blues, gradients, or any other color to the logo mark. Use only White, Smoke (#e8e8e8), or Carbon (#0a0a0a).</p>
+      </div>
+      <div class="rule-card rule-card--do">
+        <span class="rule-card__badge">Do</span>
+        <p class="rule-card__title">Use the Right Variant</p>
+        <p class="rule-card__text">Use the circle mark for hero, social, and cinematic contexts. Use the horizontal lockup for navigation and business documents.</p>
+      </div>
+      <div class="rule-card rule-card--dont">
+        <span class="rule-card__badge">Don't</span>
+        <p class="rule-card__title">Don't Stretch or Skew</p>
+        <p class="rule-card__text">Always scale the logo proportionally. Never distort, rotate (outside the designed animation context), or crop the circular mark.</p>
+      </div>
+      <div class="rule-card rule-card--do">
+        <span class="rule-card__badge">Do</span>
+        <p class="rule-card__title">Use Clash Display for All Headings</p>
+        <p class="rule-card__text">All display text must use Clash Display. Fallback to Arial Black when the web font is unavailable. Never substitute with serif or script fonts.</p>
+      </div>
+      <div class="rule-card rule-card--dont">
+        <span class="rule-card__badge">Don't</span>
+        <p class="rule-card__title">Don't Use Caveat Outside the Logo</p>
+        <p class="rule-card__text">Caveat is reserved exclusively for the circular logo mark. It must not be used in any other UI context, headline, or body copy.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ══ VOICE ══════════════════════════════════════════════ -->
+  <section class="section" id="voice">
+    <p class="section-label">07 — Brand Voice</p>
+    <h2 class="section-title">Tone &amp; Voice</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;">
+      <div style="background:#111;border:1px solid #2a2a2a;border-radius:12px;padding:28px;">
+        <p style="font-family:'Clash Display',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#e0e0e0;margin-bottom:10px;">Cinematic</p>
+        <p style="font-size:13px;color:#555;line-height:1.65;">Everything is a frame. We treat words with the same intentionality we treat footage — purposeful, composed, nothing wasted.</p>
+      </div>
+      <div style="background:#111;border:1px solid #2a2a2a;border-radius:12px;padding:28px;">
+        <p style="font-family:'Clash Display',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#e0e0e0;margin-bottom:10px;">Authentic</p>
+        <p style="font-size:13px;color:#555;line-height:1.65;">We don't oversell. The work speaks. Copy is honest, direct, and grounded — never hype for its own sake.</p>
+      </div>
+      <div style="background:#111;border:1px solid #2a2a2a;border-radius:12px;padding:28px;">
+        <p style="font-family:'Clash Display',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#e0e0e0;margin-bottom:10px;">Athlete-First</p>
+        <p style="font-size:13px;color:#555;line-height:1.65;">The story is always about the athlete, not the camera. Copy centers the human, the journey, the grit behind the achievement.</p>
+      </div>
+      <div style="background:#111;border:1px solid #2a2a2a;border-radius:12px;padding:28px;">
+        <p style="font-family:'Clash Display',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#e0e0e0;margin-bottom:10px;">Precise</p>
+        <p style="font-size:13px;color:#555;line-height:1.65;">Short sentences. Confident statements. We avoid filler. Every word earns its place — just like every shot earns its place in the edit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FOOTER ═════════════════════════════════════════════ -->
+  <footer style="border-top:1px solid #1e1e1e;padding-top:40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+    <div>
+      <p style="font-family:'Clash Display',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#2a2a2a;">Inside Narrative Media</p>
+      <p style="font-size:11px;color:#333;margin-top:4px;">Brand Guide · Version 1.0 · 2026</p>
+    </div>
+    <p style="font-size:11px;color:#333;">Sports Videography · Phoenix, AZ · insidenarrativemedia@gmail.com</p>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Inside Narrative Media — Circular Logo (white text, transparent bg — for dark backgrounds) -->
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="400" height="400" role="img" aria-label="Inside Narrative Media">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:ital,wght@1,700&amp;display=swap');
+    </style>
+    <path id="circle-path-trans" d="M 200,200 m -155,0 a 155,155 0 1,1 310,0 a 155,155 0 1,1 -310,0"/>
+  </defs>
+  <text font-family="'Caveat', cursive" font-size="50" font-weight="900" font-style="italic" fill="#ffffff">
+    <textPath href="#circle-path-trans" startOffset="0%" textLength="974" lengthAdjust="spacing">NARRATIVE·INSIDE·</textPath>
+  </text>
+</svg>
