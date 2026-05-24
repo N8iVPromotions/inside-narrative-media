@@ -66,9 +66,9 @@
   --color-text-muted:  #999999;
   --color-text-faint:  #555555;
 
-  --color-accent:      #e0e0e0;
-  --color-accent-hover:#6fb4ff;
-  --color-accent-dark: #2d7ad6;
+  --color-accent:      #3F00FF;
+  --color-accent-hover:#5200ff;
+  --color-accent-dark: #2d00cc;
 
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
   --shadow-md: 0 4px 16px rgba(0,0,0,0.5);
@@ -213,7 +213,7 @@
 }
 .nav__link--cta {
   color: #ffffff;
-  background: #3F00FF;
+  background: var(--color-accent);
   padding: var(--space-2) var(--space-5);
   border-radius: var(--radius-full);
   font-weight: 600;
@@ -223,7 +223,7 @@
 }
 .nav__link--cta:hover {
   color: #ffffff;
-  background: #5200ff;
+  background: var(--color-accent-hover);
 }
 
 .nav__burger {
@@ -281,7 +281,7 @@
   letter-spacing: 0.05em;
 }
 .mobile-menu__link--cta {
-  color: #3F00FF;
+  color: var(--color-accent);
 }
 
 /* ── Hero ── */
@@ -418,11 +418,11 @@
   transition: all var(--transition-interactive);
 }
 .btn--primary {
-  background: #3F00FF;
+  background: var(--color-accent);
   color: #ffffff;
 }
 .btn--primary:hover {
-  background: #5200ff;
+  background: var(--color-accent-hover);
   transform: translateY(-1px);
 }
 .btn--primary:active {
