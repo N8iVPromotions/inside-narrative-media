@@ -213,7 +213,7 @@
 }
 .nav__link--cta {
   color: #ffffff;
-  background: var(--color-accent);
+  background: #3F00FF;
   padding: var(--space-2) var(--space-5);
   border-radius: var(--radius-full);
   font-weight: 600;
@@ -223,7 +223,7 @@
 }
 .nav__link--cta:hover {
   color: #ffffff;
-  background: var(--color-accent-hover);
+  background: #5200ff;
 }
 
 .nav__burger {
@@ -281,7 +281,7 @@
   letter-spacing: 0.05em;
 }
 .mobile-menu__link--cta {
-  color: var(--color-accent);
+  color: #3F00FF;
 }
 
 /* ── Hero ── */
@@ -418,11 +418,11 @@
   transition: all var(--transition-interactive);
 }
 .btn--primary {
-  background: var(--color-accent);
+  background: #3F00FF;
   color: #ffffff;
 }
 .btn--primary:hover {
-  background: var(--color-accent-hover);
+  background: #5200ff;
   transform: translateY(-1px);
 }
 .btn--primary:active {
