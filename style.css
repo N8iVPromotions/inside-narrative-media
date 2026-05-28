@@ -96,6 +96,19 @@
   --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
 }
 
+/* ── Utilities ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ── Global ── */
 .container {
   width: 100%;
