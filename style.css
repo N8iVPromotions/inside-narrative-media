@@ -706,8 +706,7 @@
   font-weight: 500;
   color: var(--color-text);
   line-height: 1.8;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.01em;
   max-width: none;
 }
 .about__accent {
