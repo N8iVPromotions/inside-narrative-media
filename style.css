@@ -1412,3 +1412,13 @@
     max-width: 720px;
   }
 }
+
+/* ── SVG circular logo text: force Caveat via CSS so mobile browsers
+   use the loaded webfont rather than falling back to system cursive ── */
+.nav__logo-circle text,
+.hero__logo-circle text,
+.preloader__circle text {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-style: italic;
+}
