@@ -1268,3 +1268,147 @@
   }
   .project-nav__link--next { text-align: left; }
 }
+
+/* ═══════════════════════════════════════
+   RESPONSIVE OPTIMIZATIONS
+   ═══════════════════════════════════════ */
+
+/* ── Touch devices: always show play button ── */
+@media (hover: none) {
+  .project__play {
+    opacity: 0.75;
+  }
+  .project__video-wrap:hover .project__play {
+    opacity: 0.75;
+  }
+  .project__play:hover {
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* ── iOS input zoom fix: enforce 16px min on inputs ── */
+@media (max-width: 768px) {
+  .contact__input {
+    font-size: 1rem;
+  }
+}
+
+/* ── Hero: cap logo on very small phones ── */
+@media (max-width: 480px) {
+  .hero__logo-circle {
+    width: min(320px, 82vw, 55dvh);
+    height: min(320px, 82vw, 55dvh);
+  }
+}
+
+/* ── Page hero: reduce padding on mobile ── */
+@media (max-width: 768px) {
+  .page-hero {
+    padding: calc(var(--space-16) + 60px) var(--space-6) var(--space-8);
+  }
+}
+@media (max-width: 480px) {
+  .page-hero {
+    padding: calc(var(--space-12) + 60px) var(--space-5) var(--space-6);
+  }
+  .page-hero__title {
+    font-size: var(--text-2xl);
+  }
+}
+
+/* ── Project detail: reduce padding on mobile ── */
+@media (max-width: 768px) {
+  .project-detail {
+    padding-top: calc(var(--space-16) + 60px);
+    padding-bottom: var(--space-16);
+  }
+  .project-detail__title {
+    font-size: var(--text-2xl);
+  }
+}
+
+/* ── Video modal: accessible close button on mobile ── */
+@media (max-width: 640px) {
+  .video-modal__inner {
+    width: 95%;
+  }
+  .video-modal__close {
+    top: auto;
+    bottom: calc(-1 * var(--space-12));
+    right: 50%;
+    transform: translateX(50%);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3) var(--space-6);
+  }
+}
+
+/* ── Section header: tighter on mobile ── */
+@media (max-width: 640px) {
+  .section-header {
+    margin-bottom: var(--space-8);
+  }
+  .contact__title {
+    font-size: var(--text-2xl);
+  }
+}
+
+/* ── Work: tighter on small phones ── */
+@media (max-width: 480px) {
+  .project__video-wrap--vertical {
+    max-width: 200px;
+  }
+  .section-footer {
+    padding-top: var(--space-10);
+  }
+}
+
+/* ── About image: constrain height on mobile ── */
+@media (max-width: 640px) {
+  .about__img--portrait {
+    max-height: 420px;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+/* ── Testimonials: tighter padding on phones ── */
+@media (max-width: 480px) {
+  .testimonial-card {
+    padding: var(--space-6);
+  }
+}
+
+/* ── Project nav: stack cleanly on very small screens ── */
+@media (max-width: 400px) {
+  .project-nav {
+    gap: var(--space-4);
+  }
+  .project-nav__name {
+    font-size: var(--text-base);
+    white-space: normal;
+  }
+  .project-nav__all {
+    order: -1;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* ── Desktop: constrain project detail body width on wide screens ── */
+@media (min-width: 1400px) {
+  .project-detail__body {
+    max-width: 860px;
+  }
+}
+
+/* ── Desktop: contact form max-width on wide screens ── */
+@media (min-width: 1200px) {
+  .contact__form {
+    max-width: 720px;
+  }
+}
