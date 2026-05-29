@@ -1,3 +1,8 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/portfolio", "destination": "/portfolio.html" },
+    { "source": "/project/hyrox-phoenix", "destination": "/project-hyrox.html" },
+    { "source": "/project/arizona-cardinals", "destination": "/project-cardinals.html" },
+    { "source": "/project/built-better", "destination": "/project-built-better.html" }
+  ]
 }
