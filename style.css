@@ -969,6 +969,19 @@
   .contact__row { grid-template-columns: 1fr; }
   .contact__submit { align-self: stretch; }
 }
+.contact__success {
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  text-align: center;
+  padding: var(--space-16) 0;
+  line-height: 1.6;
+}
+.contact__error {
+  font-size: var(--text-sm);
+  color: #ff5555;
+  margin-top: var(--space-4);
+  line-height: 1.5;
+}
 
 /* ── Footer ── */
 .footer {

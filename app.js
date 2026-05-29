@@ -175,6 +175,44 @@
     });
   }
 
+  // ── Contact Form ──
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const btn = contactForm.querySelector('[type="submit"]');
+      const originalText = btn.textContent;
+      btn.textContent = "Sending…";
+      btn.disabled = true;
+
+      try {
+        const res = await fetch(contactForm.action, {
+          method: "POST",
+          body: new FormData(contactForm),
+          headers: { Accept: "application/json" },
+        });
+        const data = await res.json();
+        if (data.success) {
+          contactForm.innerHTML =
+            '<p class="contact__success">Message sent — we\'ll be in touch soon.</p>';
+        } else {
+          throw new Error("failed");
+        }
+      } catch {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        let err = contactForm.querySelector(".contact__error");
+        if (!err) {
+          err = document.createElement("p");
+          err.className = "contact__error";
+          contactForm.appendChild(err);
+        }
+        err.textContent =
+          "Something went wrong. Please try again or email us directly at insidenarrativemedia@gmail.com.";
+      }
+    });
+  }
+
   // ── Duplicate gallery images for seamless marquee ──
   const galleryTrack = document.querySelector(".gallery__track");
   if (galleryTrack) {

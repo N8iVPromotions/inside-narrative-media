@@ -416,7 +416,11 @@
             <h2 class="contact__title">Ready to Tell<br>Your Story?</h2>
             <p class="contact__sub">Whether it's a single event or an ongoing partnership, we bring the same cinematic craft and storytelling precision to every project.</p>
           </div>
-          <form class="contact__form" name="contact" action="mailto:insidenarrativemedia@gmail.com" method="POST" enctype="text/plain" novalidate>
+          <form class="contact__form" id="contactForm" name="contact" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+            <input type="hidden" name="subject" value="New enquiry — Inside Narrative Media">
+            <input type="hidden" name="from_name" value="Inside Narrative Media Website">
+            <input type="checkbox" name="botcheck" style="display:none">
             <div class="contact__row">
               <div class="contact__field">
                 <label class="contact__label" for="contact-name">Name</label>
